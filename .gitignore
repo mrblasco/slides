@@ -1,0 +1,8 @@
+.DS_Store
+
+_export
+*.log
+*.pptx
+
+.lintr
+.here

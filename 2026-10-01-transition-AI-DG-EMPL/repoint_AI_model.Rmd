@@ -1,0 +1,761 @@
+---
+title: > 
+    From the US Model to an EU Calibration
+
+subtitle: >
+    Key ingredients of *Economic Scenarios for Transformative AI* and the proposed EU re-pointing"
+
+author: >
+    Andrea Blasco | Joint Research Centre | Unit S.1 - EU Policy Lab: Foresight, Design & Behavioural
+
+date: >
+    October 2, 2026
+
+fontsize: 11pt
+bibliography: [refs.bib]
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+    echo = FALSE
+)
+```
+
+
+# The EU Policy Lab
+
+> Working with policymakers, experts and citizens, we help institutions navigate uncertainty and design resilient, future-oriented and evidence-based policies. 
+
+```{r eupl, out.width="50%"}
+knitr::include_graphics(
+    here::here("images", "eupl.png")
+)
+```
+
+---
+
+# Economic Scenarios for Transformative AI
+
+@korinek2026economic replicated by @lujan2026reproducing
+
+```{r paper, out.width="50%"}
+knitr::include_graphics(
+    here::here("images", "cover.png")
+)
+```
+
+---
+
+# When will AI be able to do tasks as well as skilled professionals? (US adults)
+
+```{r survey, out.width="100%"}
+knitr::include_graphics(
+    here::here("images", "survey.png")
+)
+```
+
+The model explores the impact of transformative AI on employement and wages.
+
+---
+
+# From the US Model to an EU Calibration
+
+### Key ingredients of *Economic Scenarios for Transformative AI*
+
+### And what changes when we re-point the model to the EU?
+
+---
+
+# 1. What is the model trying to do?
+
+### A compact model of the AI transition
+
+The paper links AI development to:
+
+* productivity and GDP;
+* wages and the labour share;
+* employment reallocation;
+* unemployment.
+
+The key comparison is:
+
+$$
+\Delta \ln X_t =
+\ln X_t^{AI}
+-
+\ln X_t^{noAI}
+$$
+
+So the model reports the **gap relative to a no-AI counterfactual**.
+
+<br>
+
+The scenarios are **illustrative scenarios**, not forecasts.
+
+---
+
+# The economic architecture
+
+```{r model, out.width="100%"}
+knitr::include_graphics(
+    here::here(
+        "images", "model.png"
+    )
+)
+```
+
+---
+
+# 2. Production: a task-based CES economy
+
+The final good is produced from task instances:
+
+$$
+Y_t =
+    \left(
+        \sum_i
+        \omega_i^{1/\sigma}
+        y_{i,t}^{(\sigma-1)/\sigma}
+    \right)^{\sigma/(\sigma-1)}
+$$
+
+where:
+
+* $\sigma$ is the elasticity of substitution across task instances;
+* task instances can be performed using **labour** or **capital**;
+* AI changes the cost/productivity of performing tasks.
+
+---
+
+# Two occupation groups
+
+The labour market is divided into:
+
+### Cognitive occupations
+
+Managers, professionals, technical and office-type work.
+
+### Other occupations
+
+All remaining occupations.
+
+The important mechanism is:
+
+$$
+\text{AI}
+\rightarrow
+C\text{-employment}\downarrow
+\rightarrow
+\text{reallocation toward }N
+$$
+
+But workers cannot instantly move between occupations.
+
+That is where the labour-market block becomes important.
+
+---
+
+# 3. The five AI scenario primitives
+
+The AI side of the model is summarized by five objects.
+
+| Symbol   | Interpretation                                      |
+| -------- | --------------------------------------------------- |
+| $m_t$    | Mass of tasks affected by AI                        |
+| $d_t$    | Diffusion/use of AI                                 |
+| $a_t$    | Productivity gain from AI                           |
+| $\psi_t$ | Share of AI use that automates rather than augments |
+| $\rho$   | Reinstatement of new labour tasks                   |
+
+A central productivity term (expected productivity gain from AI) is:
+$$
+\boxed{m_t d_t a_t}
+$$
+
+But the employment effect depends additionally on:
+$$
+\boxed{\psi_t,\quad \rho}
+$$
+
+---
+
+# Productivity and employment are different channels
+
+### Productivity
+
+More tasks affected, greater diffusion and larger productivity gains imply:
+
+$$
+m \uparrow,\quad d \uparrow,\quad a \uparrow
+$$
+
+and therefore stronger output effects.
+
+### Employment
+
+Automation matters:
+
+$$
+\psi \uparrow
+\Rightarrow
+\text{more direct displacement}
+$$
+
+Reinstatement works in the opposite direction:
+
+$$
+\rho \uparrow
+\Rightarrow
+\text{more new labour tasks}
+$$
+
+<!-- ### Key point
+
+**The same productivity gain can generate very different labour-market outcomes.** -->
+
+---
+
+# 4. Capital supply and distribution
+
+AI raises productivity and can increase demand for capital.
+
+Capital supply is upward sloping:
+
+$$
+\Delta\ln K_t
+=
+\varepsilon \Delta\ln r_t
+$$
+
+The paper uses:
+
+$$
+\varepsilon=3
+$$
+
+with: $\bar r=0.115$, $\delta=0.05$.
+
+### Why this matters
+
+The elasticity of capital supply affects how the productivity gain is divided between: capital income; wages.
+
+---
+
+# 5. The innovation channel
+
+AI does not only affect existing production.
+
+The model also allows AI to increase the productivity of **ideas production**.
+
+$$
+R_t
+\rightarrow
+A_t
+\rightarrow
+\text{productivity}
+$$
+
+The paper uses a semi-endogenous ideas-production block.
+
+### Main implication
+
+A one-off increase in research productivity affects the level of the ideas stock, while the long-run growth-rate implications are more limited.
+<!-- 
+Over the 2026–2030 horizon, this channel is distinct from the direct task-productivity channel. -->
+
+---
+
+# 6. Why unemployment appears
+
+AI displacement does not necessarily translate immediately into unemployment.
+
+Instead:
+$$
+\text{Cognitive displacement} \Rightarrow \text{Workers search for other jobs}
+$$
+$$
+\Downarrow
+$$
+$$
+\text{Matching frictions} (\mu) \Rightarrow \boxed{U\uparrow}
+$$
+
+
+The model therefore contains:
+
+* separation/quit flows;
+* job-finding rates;
+* vacancy-filling rates;
+* matching frictions;
+* occupational switching;
+* vacancy posting;
+* cognitive wage rigidity.
+
+---
+
+# Wage rigidity is another key ingredient
+
+<!-- When AI reduces demand for cognitive labour: -->
+
+### Flexible wages ($\xi = 0$)
+
+More of the adjustment occurs through:
+$$
+w_C\downarrow
+$$
+
+### Rigid wages ($\xi \rightarrow 1$)
+
+More of the adjustment occurs through:
+$$
+C\text{-employment}\downarrow
+$$
+
+and potentially:
+$$
+U\uparrow
+$$
+
+### Hence
+
+**Wage rigidity affects the distribution of the shock between wages and employment.**
+
+---
+
+# 7. The three AI scenarios
+
+|            | Modest | Substantial | Extreme |
+| ---------- | -----: | ----------: | ------: |
+| $m_{2030}$ |   0.20 |        0.30 |    0.50 |
+| $d_{2030}$ |   0.20 |        0.40 |    0.60 |
+| $a_{2030}$ |   0.30 |        0.45 |    0.80 |
+| $\psi$     |   0.50 |        0.75 |    0.90 |
+| $\rho$     |   0.50 |        0.25 |    0.00 |
+| $\mu$      |   0.17 |        0.08 |    0.04 |
+
+### Interpretation
+
+The scenarios differ both in:
+
+**AI advancement** ($m,\ d,\ a$)
+
+and in:
+
+**labour-market disruption** ($\psi,\ \rho,\ \mu$)
+
+---
+
+# 8. What does "EU re-pointing" mean?
+
+The objective is **not to rebuild the model from scratch**.
+
+Instead:
+
+### Keep
+
+* model equations;
+* production structure;
+* AI scenario architecture;
+* most structural parameters where EU evidence is unavailable.
+
+### Re-point
+
+* cognitive employment share;
+* labour income share;
+* labour-market flows;
+* TFP/ideas-growth inputs;
+* vacancy/job-flow parameters.
+
+
+---
+
+# 9. Proposed EU calibration
+
+| Parameter      |       EU value | Classification |
+| -------------- | -------------: | -------------- |
+| `share_C`      |      **0.539** | **OBSERVED**   |
+| `s_L`          |      **0.555** | **DERIVED**    |
+| `g_A`          |     unresolved | **MISSING**    |
+| `pi_bar_mean`  |     unresolved | **MISSING**    |
+| `mu_bar`       |      **0.100** | **ASSUMPTION** |
+| `q_bar_annual` |      **0.070** | **ASSUMPTION** |
+| `sep_rel`      | **0.69, 1.52** | **ASSUMPTION** |
+
+### Geography
+
+**EU-27**
+
+### Reference year
+
+**2024**
+
+### Data extraction
+
+**30 September / 1 October 2026**
+
+---
+
+# The EU values in context
+
+### Cognitive employment share
+
+$$
+\boxed{
+share_C^{EU}=0.539
+}
+$$
+
+versus:
+$$
+share_C^{US}=0.624
+$$
+
+### Labour share
+
+$$
+\boxed{
+s_L^{EU}=0.555
+}
+$$
+
+versus:
+$$
+s_L^{US}=0.600
+$$
+
+---
+
+# 10. The cognitive occupation crosswalk
+
+The proposed default is:
+$$
+\boxed{ISCO\ OC1-4}
+$$
+
+This produces:
+$$
+share_C=0.539
+$$
+
+But alternative mappings give:
+$$
+OC1-2
+\quad\Rightarrow\quad
+0.28
+$$
+
+$$
+OC1-3
+\quad\Rightarrow\quad
+0.44
+$$
+
+### Why this matters
+
+Changing the crosswalk changes the size of the model's cognitive labour pool.
+
+
+---
+
+# 11. The first missing input: TFP growth
+
+The model needs:
+
+$$
+g_A
+$$
+
+as an input to the ideas/TFP block.
+
+The feasibility exercise does **not** equate this with EU GDP growth.
+
+Instead:
+
+$$
+g_A=0.010
+$$
+
+is retained from the US calibration **solely to allow the model to run**.
+ 
+### Next step
+
+Construct and validate an EU-specific TFP/ideas-growth series.
+
+---
+
+# 12. The second missing input: vacancy filling
+
+The model requires:
+
+$$
+\pi_{\text{bar}}
+$$
+
+—the rate at which vacancies are filled.
+
+The feasibility exercise retains:
+
+$$
+\pi_{\text{bar}}=0.65
+$$
+
+from the US calibration.
+
+<!-- ### But EU vacancy data measure something else
+
+A vacancy rate is approximately:
+
+$$
+\frac{\text{vacancies}}
+{\text{filled jobs}+\text{vacancies}}
+$$
+
+whereas a vacancy-filling rate concerns:
+
+$$
+\frac{\text{vacancies filled}}
+{\text{vacancies}}
+$$
+
+These are **different objects**. -->
+
+### Notice
+
+The EU vacancy rate should **not** simply be plugged into `pi_bar_mean`.
+
+---
+
+# 13. What remains US-based?
+
+The feasibility exercise retains:
+$$
+\sigma=0.50
+$$
+$$
+\varepsilon=3
+$$
+$$
+\bar r=0.115
+$$
+$$
+\delta=0.05
+$$
+$$
+\bar U=0.038
+$$
+
+and:
+$$
+\iota=1.27
+$$
+
+along with other structural relationships from the US model.
+
+### Interpretation
+
+This is reasonable for a **technical feasibility run**.
+
+But it does not establish that these parameters are appropriate for the EU.
+
+---
+
+# 14. How should we read the EU–US results?
+
+The results are **gaps relative to each region's no-AI path**.
+
+So:
+
+$$
++8\%
+$$
+
+means:
+
+> output is 8% above the corresponding no-AI counterfactual.
+
+It does **not** mean:
+
+> GDP grows by 8% per year.
+
+# Substantial scenario: feasibility run
+
+| 2030 outcome         |     EU |     US |
+| -------------------- | -----: | -----: |
+| GDP gap              | +8.16% | +8.29% |
+| Average wage gap     | +1.87% | +2.14% |
+| Cognitive employment | −5.12% | −3.87% |
+| Unemployment         |  4.55% |  4.57% |
+| Labour share         | 51.83% | 56.10% |
+
+These are **conditional simulation outputs**, given the calibration choices.
+
+---
+
+# The right interpretation
+
+The feasibility results show that:
+
+### The model can be mechanically re-run
+
+with:
+
+$$
+EU\ inputs
+$$
+
+instead of:
+
+$$
+US\ inputs
+$$
+
+But they do **not yet establish**:
+
+$$
+\boxed{
+\text{Estimated effect of AI on EU employment}
+}
+$$
+
+because several important parameters remain:
+
+* assumed;
+* US-based;
+* unresolved.
+
+---
+
+# 15. What would make this a defensible EU study?
+
+### 1. Resolve missing inputs
+
+* EU TFP/ideas-growth measure.
+* EU vacancy-filling rate.
+
+### 2. Replace assumptions
+
+Use EU evidence for occupational mobility and labour market conditions
+
+### 3. Validate the cognitive crosswalk
+
+Compare:
+$$
+OC1-2,\quad OC1-3,\quad OC1-4
+$$
+
+and potentially alternative exposure concepts.
+
+### 4. Revisit US structural parameters
+
+Especially:
+$$
+\sigma,\quad
+\varepsilon,\quad
+\text{matching parameters},\quad
+\text{wage rigidity}
+$$
+
+---
+
+# Sensitivity analysis should be central
+
+The EU exercise should systematically vary:
+
+$$
+share_C
+$$
+$$
+\mu
+$$
+$$
+q
+$$
+$$
+\pi
+$$
+$$
+\varepsilon
+$$
+
+and other parameters for which EU evidence is weak.
+
+### Why?
+
+Because the uncertainty is not only about the AI scenario. There is also uncertainty about:
+
+$$
+\boxed{
+\text{how the EU economy transmits the AI shock}
+}
+$$
+
+---
+
+# Take-away
+
+### The model has five connected layers
+
+$$
+\boxed{
+AI
+\rightarrow
+Task\ productivity
+\rightarrow
+Capital + wages
+\rightarrow
+Employment\ reallocation
+\rightarrow
+Unemployment
+}
+$$
+
+### The EU re-pointing changes the empirical starting point
+
+But currently:
+
+* `share_C` is observed but crosswalk-dependent;
+* `s_L` is derived from EU data;
+* `g_A` remains unresolved;
+* `pi_bar_mean` remains unresolved;
+* several labour-market parameters are assumptions;
+* several structural parameters remain US-based.
+
+---
+
+# Thanks
+
+$$
+    \text{Andrea Blasco}
+$$
+$$
+    \text{JRC, EU Policy Lab}
+$$
+$$
+    \text{andrea.blasco@ec.europa.eu}
+$$
+
+--- 
+
+# References
+
+### Main source
+
+*Economic Scenarios for Transformative AI.*
+
+### Data / calibration sources used in the feasibility exercise
+
+* Eurostat EU Labour Force Survey — occupation and employment data.
+* Eurostat national accounts — labour compensation and income shares.
+* AMECO — macroeconomic calibration and national-account concepts.
+* US labour-market sources used in the original paper's calibration.
+
+<br>
+
+### Key calibration principle
+
+> **Every EU input should be labelled as observed, derived, assumed, or unresolved.**
+
+This makes the distinction between **model mechanism**, **empirical calibration**, and **scenario assumption** transparent.
+
+
+# References

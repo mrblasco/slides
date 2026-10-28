@@ -1,0 +1,230 @@
+---
+title: "Policy Lab example"
+author: "Joint Research Centre"
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+---
+
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(dplyr)
+
+# ------------------------------------------------------------------
+# Policy Lab chart theme
+# ------------------------------------------------------------------
+
+theme_policy <- function() {
+  theme_minimal(base_size = 15) +
+    theme(
+      plot.title = element_text(
+        face = "bold",
+        size = 18
+      ),
+      plot.subtitle = element_text(
+        size = 12,
+        colour = "#5F6B76"
+      ),
+      plot.caption = element_text(
+        size = 9,
+        colour = "#5F6B76"
+      ),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.x = element_blank(),
+      axis.title = element_text(
+        face = "bold",
+        size = 11
+      ),
+      axis.text = element_text(
+        colour = "#1F2933"
+      )
+    )
+}
+
+# ------------------------------------------------------------------
+# Colours
+# ------------------------------------------------------------------
+
+JRC_BLUE <- "#005B9A"
+EU_BLUE  <- "#003B95"
+NAVY     <- "#003B5C"
+YELLOW   <- "#FFCC00"
+GREY     <- "#5F6B76"
+LIGHT    <- "#F3F5F7"
+PALE     <- "#E8F1F7"
+```
+
+# The Lab 
+
+## EU Policy Lab 
+
+```{r, out.width = "50%", echo = FALSE}
+knitr::include_graphics(
+  "img/eupl.png"
+)
+```
+
+# Framing the question
+
+## The policy question
+
+> What is changing, for whom, and what could it mean for EU policy?
+
+**Context**
+
+Briefly explain why this question matters.
+
+Keep this slide deliberately sparse. The purpose is to establish the problem before presenting evidence.
+
+---
+
+# Evidence
+
+## A declarative slide title
+
+The title should communicate the finding rather than merely name the chart.
+
+```{r evidence-chart, echo=FALSE, fig.width=10, fig.height=4.8}
+d <- data.frame(
+  group = c("A", "B", "C", "D", "E"),
+  value = c(42, 55, 61, 68, 74)
+)
+
+ggplot(d, aes(group, value)) +
+  geom_col(
+    fill = JRC_BLUE,
+    width = 0.65
+  ) +
+  labs(
+    x = NULL,
+    y = "%",
+    subtitle = "Illustrative data — replace with your evidence",
+    caption = "Source: Example dataset"
+  ) +
+  theme_policy()
+```
+
+**Key message**
+
+Replace this sentence with the interpretation that you want the audience to remember.
+
+**Implication**
+
+Explain what the finding could mean for policy, implementation, or further analysis.
+
+---
+
+# Insights
+
+## Two-column synthesis
+
+### What the evidence says
+
+* Finding or observation
+* Finding or observation
+* Finding or observation
+
+### What it could mean
+
+* Interpretation
+* Trade-off or uncertainty
+* Question for discussion
+
+---
+
+# Comparison
+
+## A compact comparison
+
+| Dimension   | Group A | Group B | Group C | Note    |
+| ----------- | ------: | ------: | ------: | ------- |
+| Dimension 1 |      42 |      55 |      61 | Example |
+| Dimension 2 |      31 |      48 |      57 | Example |
+| Dimension 3 |      68 |      71 |      74 | Example |
+| Dimension 4 |      25 |      39 |      44 | Example |
+
+**Source:** Replace with the actual source.
+
+---
+
+# Voices
+
+## A stakeholder perspective
+
+> “A short quotation can provide the human perspective behind the evidence.”
+
+— Stakeholder / source
+
+Keep quotations short and use them to complement—not replace—the evidence.
+
+---
+
+# Method
+
+## Methodological note
+
+Use this layout when transparency is more important than visual impact.
+
+### Data
+
+**Source**
+
+Dataset or publication.
+
+**Population**
+
+Who or what is covered?
+
+**Period**
+
+YYYY–YYYY.
+
+**Coverage**
+
+Countries, regions, sectors, etc.
+
+### Method
+
+**Design**
+
+Survey / experiment / administrative data / modelling / qualitative research.
+
+**Indicators**
+
+Main variables or measures.
+
+**Estimation**
+
+Model or analytical approach.
+
+### Limitations
+
+* Main limitation
+* Important caveat
+* Remaining uncertainty
+
+**Source:** Full source citation / DOI / dataset identifier.
+
+---
+
+# Discussion
+
+## Questions for discussion
+
+1. What is the most important implication of this finding?
+2. Where is further evidence needed?
+3. What would change our interpretation?
+4. What are the implementation or policy trade-offs?
+
+---
+
+# Take-away
+
+## One clear message
+
+**The audience should leave with one idea.**
+
+Use the final slide to state the central conclusion in one sentence.
+
+### Question
+
+What should we explore next?
