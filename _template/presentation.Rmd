@@ -117,17 +117,22 @@ Explain what the finding could mean for policy, implementation, or further analy
 
 ## Two-column synthesis
 
+::: columns
+:::: column
 ### What the evidence says
 
 * Finding or observation
 * Finding or observation
 * Finding or observation
-
+::::
+:::: column
 ### What it could mean
 
 * Interpretation
 * Trade-off or uncertainty
 * Question for discussion
+::::
+:::
 
 ---
 

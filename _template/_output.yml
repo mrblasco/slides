@@ -1,5 +1,6 @@
 powerpoint_presentation:
-  toc_depth: 2
+  reference_doc: reference.pptx
+  slide_level: 2
 
 beamer_presentation:
   latex_engine: xelatex
